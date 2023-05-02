@@ -25,19 +25,20 @@ router.post('/', (req, res) => {
     res.send('Create new Place')
 })
 router.get('/new', (req, res) => {
-    res.send('Form page for creating a new place')
+    res.render('newpage')
 })
 router.get('/:id', (req, res) => {
-    res.send('Details about a particular place')
+    res.render('showpage')
 })
 router.put('/:id', (req, res) => {
     res.send('Update a particular place')
 })
 
-router.get('/places/:id/edit', (req, res) => {
-    res.send('Form page for editing an existing place')
+router.get('/:id/edit', (req, res) => {
+    res.render('editpage')
 })
-router.delete('/:id', (req, res) => {
+
+router.delete('/places/:id', (req, res) => {
     res.send('Delete a particular place')
 })
 
