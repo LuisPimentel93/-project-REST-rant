@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         pic: 'http://placekitten.com/250/250'
       }]
       
-    res.render('index', { places })
+    res.render('places/index', { places })
 
   })
   
