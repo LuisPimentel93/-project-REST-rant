@@ -1,7 +1,8 @@
 body {
     background-color: lightblue;
-    text-align: center;
+    
 }
+
   
 main {
     margin-right: 20px;
@@ -44,3 +45,4 @@ nav a:hover {
     color: pink;
     text-decoration: none;
 }
+
