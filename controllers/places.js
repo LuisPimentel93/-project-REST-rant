@@ -28,10 +28,20 @@ router.get('/new', (req, res) => {
     res.render('places/new')
 })
 
-
+// show page
 router.get('/:id', (req, res) => {
-    res.render('showpage')
-})
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+      res.render('error404')
+    }
+    else if (!places[id]) {
+      res.render('error404')
+    }
+    else {
+      res.render('places/show', { places: places[id]})
+    }
+  })
+  
 router.put('/:id', (req, res) => {
     res.send('Update a particular place')
 })
